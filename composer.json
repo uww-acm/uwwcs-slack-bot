@@ -1,0 +1,21 @@
+{
+    "name": "uwwcs/slack-bot",
+    "license": "MIT",
+    "authors": [{
+        "name": "Stephen Coakley",
+        "email": "me@stephencoakley.com"
+    }],
+
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "require": {
+        "coderstephen/slack-client": "0.2.*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "uww\\cs\\slackbot\\": "src/"
+        }
+    }
+}

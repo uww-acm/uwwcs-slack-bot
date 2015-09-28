@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+require 'vendor/autoload.php';
+
+use uww\cs\slackbot\Bot;
+
+error_reporting(E_ALL);
+
+$bot = new Bot();
+$bot->run();
