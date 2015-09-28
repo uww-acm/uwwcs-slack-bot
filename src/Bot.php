@@ -28,10 +28,9 @@ class Bot
         $this->client = new RealTimeClient($loop);
         $this->client->setToken($this->token);
 
-        $this->client->on('message', function ($data) {
-            $this->client->getUserById($data['user'])->then(function (User $user) {
-                $this->welcomeUser($user);
-            });
+        $this->client->on('team_join', function ($data) {
+            $user = new User($this->client, $data['user']);
+            $this->welcomeUser($user);
         });
 
         $this->client->connect()->then(function () {
